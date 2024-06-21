@@ -1,0 +1,73 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #2e2e2e; /* Dark grey background to match the logo */
+  color: #e0e0e0;
+}
+
+.App {
+  text-align: center;
+}
+
+header {
+  background-color: #4c2a85; /* A shade of purple from the logo */
+  color: white;
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  margin-right: 1rem;
+}
+
+.header-text h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.header-text p {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  width: 80%;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.panel {
+  background-color: #3a3a3a; /* Dark grey panels */
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+h1, h2 {
+  color: #b386d6; /* Light purple text to match the logo */
+}
+
+.section {
+  margin-bottom: 2rem;
+}
+
+.contact-info, .links {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-info li, .links li {
+  margin-bottom: 0.5rem;
+}
+
+.links a {
+  color: #b386d6;
+  text-decoration: none;
+}
