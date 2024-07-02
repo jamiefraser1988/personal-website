@@ -17,6 +17,11 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%; /* Make header fill the full width */
+  position: fixed; /* Fix header at the top */
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
 
 .logo {
@@ -42,6 +47,7 @@ header {
   width: 80%;
   margin: 0 auto;
   padding: 2rem 0;
+  margin-top: 100px; /* Adjust for fixed header */
 }
 
 .panel {
@@ -70,4 +76,38 @@ h1, h2 {
 .links a {
   color: #b386d6;
   text-decoration: none;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 600px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    padding: 0;
+    margin-top: 120px; /* Adjust for fixed header */
+  }
+
+  .panel {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .logo {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  .header-text h1 {
+    font-size: 1.5rem;
+  }
+
+  .header-text p {
+    font-size: 1rem;
+  }
 }

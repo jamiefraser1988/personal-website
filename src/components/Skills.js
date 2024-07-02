@@ -19,9 +19,15 @@ function Skills() {
           </div>
         </div>
         <div className="skill">
+          <span>JQuery</span>
+          <div className="progress-bar">
+            <div className="progress" style={{ width: '95%' }}></div>
+          </div>
+        </div>
+        <div className="skill">
           <span>Azure</span>
           <div className="progress-bar">
-            <div className="progress" style={{ width: '45%' }}></div>
+            <div className="progress" style={{ width: '35%' }}></div>
           </div>
         </div>
         <div className="skill">
