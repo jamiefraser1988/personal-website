@@ -60,6 +60,13 @@ h1, h2 {
   color: #b386d6; /* Light purple text to match the logo */
 }
 
+/* a{
+  color: #08ec00;  
+}
+  :hover{
+    color: aqua;
+  } */
+
 .section {
   margin-bottom: 2rem;
 }
@@ -74,8 +81,12 @@ h1, h2 {
 }
 
 .links a {
-  color: #b386d6;
+  color: #b386d6; /* Light purple link color to match the logo */
   text-decoration: none;
+}
+
+.links a:hover {
+  color: #d9b3ff; /* Lighter purple on hover for better visibility */
 }
 
 /* Media query for mobile devices */

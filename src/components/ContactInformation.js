@@ -4,7 +4,7 @@ function ContactInformation() {
   return (
     <section className="section">
       <h2>Contact Information</h2>
-      <ul className="contact-info">
+      <ul className="contact-info links">
         <li>Glasgow, United Kingdom</li>
         <li>Phone: 07944836222</li>
         <li>Email: <a href="mailto:jamie.fraser1988@gmail.com">jamie.fraser1988@gmail.com</a></li>
