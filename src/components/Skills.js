@@ -3,8 +3,8 @@ import '../Styles/Skills.css';
 
 function Skills() {
   return (
-    <section className="section">
-      <h2>Skills</h2>
+    <section className="section section-skills">
+      <h2>Skills_Index</h2>
       <div className="skills">
         <div className="skill">
           <span>.NET Core</span>

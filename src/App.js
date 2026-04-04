@@ -1,37 +1,30 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Styles/App.css';
-import Header from './components/Header';
-import AboutMe from './components/AboutMe';
-import Skills from './components/Skills';
-import EmploymentHistory from './components/EmploymentHistory';
-import Education from './components/Education';
-import ContactInformation from './components/ContactInformation';
-import Links from './components/Links';
+import Navigation from './components/Navigation';
+import Hero from './components/Hero';
+import WorkSection from './components/WorkSection';
+import ContactSection from './components/ContactSection';
+import Footer from './components/Footer';
 
 function App() {
+  const [theme, setTheme] = useState(() => localStorage.getItem('theme') || 'dark');
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+  }, [theme]);
+
+  const toggleTheme = () => setTheme((t) => (t === 'dark' ? 'light' : 'dark'));
+
   return (
     <div className="App">
-      <Header />
-      <div className="container">
-        <div className="panel">
-          <AboutMe />
-        </div>
-        <div className="panel">
-          <Skills />
-        </div>
-        <div className="panel">
-          <EmploymentHistory />
-        </div>
-        <div className="panel">
-          <Education />
-        </div>
-        <div className="panel">
-          <ContactInformation />
-        </div>
-        <div className="panel">
-          <Links />
-        </div>
-      </div>
+      <Navigation theme={theme} onToggleTheme={toggleTheme} />
+      <main className="main-content">
+        <Hero />
+        <WorkSection />
+        <ContactSection />
+      </main>
+      <Footer />
     </div>
   );
 }
