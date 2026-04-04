@@ -1,13 +1,85 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root,
+[data-theme='dark'] {
+  --surface: #0e0e0e;
+  --surface-container-low: #131313;
+  --surface-container: #1a1a1a;
+  --surface-container-high: #20201f;
+  --surface-bright: #2c2c2c;
+  --surface-container-highest: #262626;
+  --outline-variant: rgba(72, 72, 71, 0.15);
+  --outline: #767575;
+  --on-surface: #ffffff;
+  --on-surface-variant: #adaaaa;
+  --primary: #8ff5ff;
+  --primary-container: #00eefc;
+  --primary-dim: #00deec;
+  --on-primary: #005d63;
+  --secondary: #ff51fa;
+  --tertiary: #f3ffca;
+  --tertiary-glow: #beee00;
+  --error: #ff716c;
+  --header-height: 5.5rem;
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[data-theme='light'] {
+  --surface: #fcf9f8;
+  --surface-container-low: #f0ebe7;
+  --surface-container: #e8e2dc;
+  --surface-container-high: #ddd6cf;
+  --surface-bright: #d4cdc5;
+  --surface-container-highest: #cac2b9;
+  --outline-variant: rgba(30, 30, 30, 0.12);
+  --outline: #5c5856;
+  --on-surface: #1a1a1a;
+  --on-surface-variant: #4a4644;
+  --primary: #006a71;
+  --primary-container: #005359;
+  --primary-dim: #004850;
+  --on-primary: #e8fdff;
+  --secondary: #8b008b;
+  --tertiary: #3a4a00;
+  --tertiary-glow: #526900;
+  --error: #b3261e;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  min-height: 100vh;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--on-surface);
+  background-color: var(--surface);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+[data-theme='dark'] body {
+  cursor: crosshair;
+}
+
+::selection {
+  background-color: var(--primary);
+  color: #0e0e0e;
+}
+
+[data-theme='light'] ::selection {
+  background-color: var(--primary);
+  color: #ffffff;
+}
+
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: 'Space Grotesk', ui-monospace, monospace;
+  font-size: 0.92em;
 }

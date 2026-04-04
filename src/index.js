@@ -4,6 +4,9 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+const storedTheme = localStorage.getItem('theme') || 'dark';
+document.documentElement.setAttribute('data-theme', storedTheme);
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
